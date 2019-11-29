@@ -26,46 +26,61 @@ namespace DictionaryBuilderDll
             return cyrillic;
         }
         //"ACCUSATION  AE2 K Y AH0 Z EY1 SH AH0 N"
+        //ARPABET list from https://en.wikipedia.org/wiki/ARPABET
         public static Dictionary<string, string> cyrillic = new Dictionary<string, string>()
         {
-            { "AA", "а" },
-            { "AE", "a" }, //e
-            { "AH", "" }, //a
-            { "AO", "о" },
-            { "AW", "ау" },
-            { "AY", "ај" },
-            { "B", "б" },
-            { "CH", "ч" },
-            { "D", "д" },
-            { "DH", "д" },
-            { "EH", "е" },
-            { "ER", "р" },
-            { "EY", "еј" },
-            { "F", "ф" },
-            { "G", "г" },
-            { "HH", "х" },
-            { "IH", "и" },
-            { "IY", "и" },
-            { "JH", "џ" },
-            { "K", "к" },
-            { "L", "л" },
-            { "M", "м" },
-            { "N", "н" },
-            { "NG", "нг" },
-            { "OW", "оу" },
-            { "OY", "ој" },
-            { "P", "п" },
-            { "R", "р" },
-            { "S", "с" },
-            { "SH", "ш" },
-            { "T", "т" },
-            { "TH", "т" },
-            { "UH", "у" },
-            { "V", "в" },
-            { "W", "у" },
-            { "Y", "ј" },
-            { "Z", "з" },
-            { "ZH", "ж" }
+            { "AA", "а" }, //bOt
+            { "AE", "е" }, //bAt 
+            { "AH", "а" }, //bUtt
+            //{ "AH", "" }, //bUtt sometimes silent
+            { "AO", "о" }, //stOry
+            { "AW", "ау" }, //bOUt ???
+            { "AX", "а" }, //commA //new
+            { "AXR", "р" }, //lettER //new
+            { "AY", "ај" }, //bIte //new
+            { "B", "б" }, //Buy
+            { "CH", "ч" }, //CHina
+            { "D", "д" }, //Die
+            { "DH", "д" }, //THy
+            { "DX", "д" }, //buTTEr //maybe empty
+            { "EH", "е" }, //bEt
+            { "EL", "л" }, //bottLE
+            { "EM", "м" }, //rythM
+            { "EN", "н" }, //buttON
+            { "ER", "р" }, //bIRd
+            { "EY", "еј" }, //bAIt
+            { "F", "ф" }, //Fight
+            { "G", "г" }, //Guy
+            { "HH", "х" }, //High
+            { "H", "х" }, //High
+            { "IH", "и" }, //bIt
+            { "IX", "и" }, //rabbIt
+            { "IY", "и" }, //bIt
+            { "JH", "џ" }, //Jive
+            { "K", "к" }, //Kite
+            { "L", "л" }, //Lie
+            { "M", "м" }, //My
+            { "N", "н" }, //Nigh
+            { "NG", "нг" }, //siNG
+            { "NX", "нг" }, //wiNNer
+            { "OW", "оу" }, //bOAt
+            { "OY", "ој" }, //bOY
+            { "P", "п" }, //Pie
+            { "Q", "" }, //"oh-oh"
+            { "R", "р" }, //Rye
+            { "S", "с" }, //Sigh
+            { "SH", "ш" }, //SHy
+            { "T", "т" }, //Tie
+            { "TH", "т" }, //Thigh
+            { "UH", "у" }, //bOOk
+            { "UW", "у" }, //bOOt
+            { "UX", "у" }, //dUde
+            { "V", "в" }, //Vie
+            { "W", "у" }, //Wise
+            { "WH", "у" }, //WHy
+            { "Y", "ј" }, //Yacht
+            { "Z", "з" }, //Zoo
+            { "ZH", "ж" } //pleaSure
         };
     }
 }
