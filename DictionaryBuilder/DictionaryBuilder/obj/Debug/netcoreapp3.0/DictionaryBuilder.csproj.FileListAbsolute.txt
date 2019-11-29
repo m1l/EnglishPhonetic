@@ -1,0 +1,14 @@
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.exe
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.deps.json
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.runtimeconfig.json
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.runtimeconfig.dev.json
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.dll
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilder.pdb
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilderDll.dll
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\DictionaryBuilderDll.pdb
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.csprojAssemblyReference.cache
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.AssemblyInfoInputs.cache
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.AssemblyInfo.cs
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.csproj.CopyComplete
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.dll
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilder\obj\Debug\netcoreapp3.0\DictionaryBuilder.pdb

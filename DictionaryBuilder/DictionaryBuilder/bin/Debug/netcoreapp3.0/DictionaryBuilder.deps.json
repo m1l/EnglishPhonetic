@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "DictionaryBuilder/1.0.0": {
+        "dependencies": {
+          "DictionaryBuilderDll": "1.0.0"
+        },
+        "runtime": {
+          "DictionaryBuilder.dll": {}
+        }
+      },
+      "DictionaryBuilderDll/1.0.0": {
+        "runtime": {
+          "DictionaryBuilderDll.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DictionaryBuilder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DictionaryBuilderDll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

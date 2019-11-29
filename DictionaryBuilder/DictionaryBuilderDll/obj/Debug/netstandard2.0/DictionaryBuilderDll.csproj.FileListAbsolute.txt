@@ -1,0 +1,8 @@
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\bin\Debug\netstandard2.0\DictionaryBuilderDll.deps.json
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\bin\Debug\netstandard2.0\DictionaryBuilderDll.dll
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\bin\Debug\netstandard2.0\DictionaryBuilderDll.pdb
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\obj\Debug\netstandard2.0\DictionaryBuilderDll.csprojAssemblyReference.cache
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\obj\Debug\netstandard2.0\DictionaryBuilderDll.AssemblyInfoInputs.cache
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\obj\Debug\netstandard2.0\DictionaryBuilderDll.AssemblyInfo.cs
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\obj\Debug\netstandard2.0\DictionaryBuilderDll.dll
+C:\GitHub\EnglishPhonetic\DictionaryBuilder\DictionaryBuilderDll\obj\Debug\netstandard2.0\DictionaryBuilderDll.pdb
