@@ -26,7 +26,7 @@ namespace PhoneticTranslator
         public MainWindow()
         {
             InitializeComponent();
-            textBox.Text = "The quick brown fox, jumps over the lazy dog. The End!";
+            textBox.Text = "The quick brown fox, jumps over the lazy dog. The End! Paste text here.";
             string phoneticDictPath = GetDictionaryPath();
             if (string.IsNullOrWhiteSpace(phoneticDictPath))
                 return;
