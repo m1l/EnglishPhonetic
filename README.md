@@ -34,7 +34,7 @@ percent,прсент
 Then if you run "PhoneticTranslator" project you will get a WPF GUI app. Read the non-developers part...
 
 ## For non-developers
-You can directly run already compiled
+There is a executable of this app if you don't want to compile it yourself. You can directly run file:
 
 DictionaryBuilder\PhoneticTranslator\bin\Debug\netcoreapp3.0\PhoneticTranslator.exe
 
@@ -47,7 +47,7 @@ DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\CyrillicDict.txt
 Now you can paste any text into the text are and click Convert button
 
 ## Future
-Croatian or Lattin alphabet, then a version for German, Esperanto, and Spanish can be added 
+Latin alphabet, then a version for German, Esperanto, and Spanish can be added 
 
 
 
