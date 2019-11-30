@@ -1,7 +1,8 @@
 ﻿# EnglishPhonetic
 ## What it does
 This program just converts English text into phonetic alphabet. Serbian Language has phonetic ortography and with the cyrilic alphabet it has "one-letter-one-sound" system. This program explores readability of text written this way and will be extended with support for other alphabet. 
-and this produces:
+
+This produces:
 
 Дис проугрем џист канвртс Ингглиш текст инту фанетик елфабет. Србијан Ленггвиџ хез фанетик ortography енд вид ди cyrilic елфабет ит хез "вн-летр-вн-саунд" систм. Дис проугрем иксплорз ридабилити ав текст ритн дис веј енд вил би икстендид вид сапорт фор адр елфабет. 
 
@@ -45,7 +46,7 @@ DictionaryBuilder\DictionaryBuilder\bin\Debug\netcoreapp3.0\CyrillicDict.txt
 
 Now you can paste any text into the text are and click Convert button
 
-##Future
+## Future
 Croatian or Lattin alphabet, then a version for German, Esperanto, and Spanish can be added 
 
 
