@@ -76,7 +76,7 @@ namespace DictionaryBuilderDll
             { "UW", "у" }, //bOOt
             { "UX", "у" }, //dUde
             { "V", "в" }, //Vie
-            { "W", "у" }, //Wise
+            { "W", "в" }, //Wise
             { "WH", "у" }, //WHy
             { "Y", "ј" }, //Yacht
             { "Z", "з" }, //Zoo

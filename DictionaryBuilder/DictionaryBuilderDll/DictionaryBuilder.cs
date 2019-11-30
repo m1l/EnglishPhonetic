@@ -29,13 +29,14 @@ namespace DictionaryBuilderDll
                             Regex.Matches(line, "AH", RegexOptions.None).Count)
                         {
                             dict.Remove(dictEntry.Item1);
+                            dict.Add(dictEntry.Item1.ToLowerInvariant(), dictEntry.Item2);
                         }
-                        else
-                            continue;
                     }
+                    else
+                        dict.Add(dictEntry.Item1.ToLowerInvariant(), dictEntry.Item2);
                     //if (dictEntry.Item1.ToLower().Equals("cause"))
                     //    continue;
-                    dict.Add(dictEntry.Item1, dictEntry.Item2);
+
                     previousLine = line;
                 }
             }
@@ -56,15 +57,21 @@ namespace DictionaryBuilderDll
         public static Tuple<string, string> BuildDicEntryFromLine(string line, Dictionary<string, string> phoneticDict)
         {
             //remove numbers for stress
-            string cleanLine = new string(line.Where(c => (char.IsLetter(c) || char.IsWhiteSpace(c))).ToArray()); 
-            
+            string cleanLine = new string(line.Where(c => (
+            char.IsLetter(c) || 
+            char.IsWhiteSpace(c) || 
+            c.Equals('\'') ||
+            c.Equals('.')))
+            .ToArray()); 
+
+
             string[] wordArray = cleanLine.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToArray(); 
             
             if (wordArray.Count() < 2) 
                 return new Tuple<string, string>("", "");
 
             string phoneticWord = ArpabetArrayToPhonetic(wordArray, phoneticDict);
-            return new Tuple<string, string>(wordArray[0], phoneticWord);
+            return new Tuple<string, string>(wordArray[0].ToLowerInvariant(), phoneticWord);
         }
 
         private static string ArpabetArrayToPhonetic(string[] arpaArray, Dictionary<string, string> phoneticDict)
@@ -76,7 +83,7 @@ namespace DictionaryBuilderDll
                 //if (i == 1 && arpaArray[1].Equals("AH"))
                 //    arpaArray[1] = "-AH"; //improvisation so we hear this sound
 
-                if (i == arpaArray.Length - 2 && arpaArray[i].Equals("AH"))
+                if (arpaArray.Length>3 && i == arpaArray.Length - 2 && arpaArray[i].Equals("AH"))
                     continue; //ah is silent at the penultimate place
                 //    arpaArray[1] = "-AH"; //improvisation so we hear this sound
 
@@ -84,6 +91,22 @@ namespace DictionaryBuilderDll
                 res += phonetic;
             }
             return res;
+        }
+
+
+        public static Dictionary<string, string> LoadDictFromFile(string path)
+        {
+            var dict = new Dictionary<string, string>();
+            using (StreamReader sr = new StreamReader(path))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    string[] wordArray = line.Split(',');
+                    dict.Add(wordArray[0], wordArray[1]);                    
+                }
+            }
+            return dict;
         }
     }
 }
