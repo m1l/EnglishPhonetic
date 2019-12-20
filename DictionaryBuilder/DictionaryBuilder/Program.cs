@@ -19,7 +19,7 @@ namespace DictionaryBuilderConsole
 
             Console.WriteLine("Saving Dictionary to file...");
             string savePath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-                @"Latinica2Dict.txt");
+                @"LatinicaDict.txt");
             //string savePath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
             //    @"SimpleDict.txt");
             dictionaryBuilder.SaveDictionaryToFile(savePath, d);

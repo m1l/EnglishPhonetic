@@ -146,9 +146,12 @@ namespace DictionaryBuilderDll
 
         public static Dictionary<string, string> latinica = new Dictionary<string, string>()
         {
-            { "AA", "a" }, //bOt
-            { "AE", "e" }, //bAt 
-            { "AH", "a" }, //bUtt
+            { "AA1", "a" }, //bOt
+            { "AA0", "a" }, //PROGNOSIS  P R AA0 G N OW1 S AH0 S
+            { "AE0", "e" }, //bAt 
+            { "AE1", "e" }, //bAt 
+            { "AH1", "a" }, //bUtt
+            { "AH0", "" }, //bUtt
             //{ "AH", "" }, //bUtt sometimes silent
             { "AO", "o" }, //stOry
             { "AW", "ou" }, //bOUt ???
@@ -160,7 +163,7 @@ namespace DictionaryBuilderDll
             { "D", "d" }, //Die
             { "DH", "ð" }, //THy THis https://en.wikipedia.org/wiki/D_with_stroke
             { "DX", "t" }, //buTTEr //maybe empty 
-            { "EH", "e" }, //bEt
+            { "EH1", "e" }, //bEt
             { "EL", "le" }, //bottLE
             { "EM", "m" }, //rythM
             { "EN", "n" }, //buttON
@@ -171,6 +174,7 @@ namespace DictionaryBuilderDll
             { "HH", "h" }, //High
             { "H", "h" }, //High
             { "IH", "i" }, //bIt
+            { "IH0", "i" }, // EVEN  IY1 V IH0 N , but EXISTING  IH0 G Z IH1 S T IH0 NG
             { "IX", "i" }, //rabbIt
             { "IY", "i" }, //bIt
             { "JH", "ƌ" }, //Jive https://altcodeunicode.com/alt-codes-letter-d-with-accents/

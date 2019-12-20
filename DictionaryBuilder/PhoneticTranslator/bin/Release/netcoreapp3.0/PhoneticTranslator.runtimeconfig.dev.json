@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\milos\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\milos\\.nuget\\packages"
+    ]
+  }
+}

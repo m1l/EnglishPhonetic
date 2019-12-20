@@ -21,16 +21,21 @@ namespace DictionaryBuilderDll
                 {
                     string line = sr.ReadLine();
                     var dictEntry = BuildDicEntryFromLine(line, phoneticDict);
+                    if (dictEntry.Item1.Length == 0)
+                        continue;
                     if (dict.ContainsKey(dictEntry.Item1)) //tryadd is only in .NET Standard 2.1, and we are targetting 2.0
                     {
                         //this is the word in (1) as alternative pronouncination
                         //AH it better silent
-                        if (Regex.Matches(previousLine, "AH", RegexOptions.None).Count >
-                            Regex.Matches(line, "AH", RegexOptions.None).Count)
+                        //if (Regex.Matches(previousLine, "AH", RegexOptions.None).Count >
+                        //    Regex.Matches(line, "AH", RegexOptions.None).Count)
+                        //{
+                        if (dictEntry.Item2.Length > dict[dictEntry.Item1].Length) //longer works seem to fit better
                         {
                             dict.Remove(dictEntry.Item1);
                             dict.Add(dictEntry.Item1.ToLowerInvariant(), dictEntry.Item2);
                         }
+                        //}
                     }
                     else
                         dict.Add(dictEntry.Item1.ToLowerInvariant(), dictEntry.Item2);
@@ -69,20 +74,27 @@ namespace DictionaryBuilderDll
         public static Tuple<string, string> BuildDicEntryFromLine(string line, Dictionary<string, string> phoneticDict)
         {
             //remove numbers for stress
-            string cleanLine = new string(line.Where(c => (
-            char.IsLetter(c) || 
-            char.IsWhiteSpace(c) || 
-            c.Equals('\'') ||
-            c.Equals('.')))
-            .ToArray()); 
+            //string cleanLine = new string(line.Where(c => (
+            //char.IsLetter(c) || 
+            //char.IsWhiteSpace(c) || 
+            //c.Equals('\'') ||
+            //c.Equals('.')))
+            //.ToArray()); 
+            //string[] wordArray = cleanLine.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
+            string[] wordArray = line.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToArray(); 
 
-
-            string[] wordArray = cleanLine.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).ToArray(); 
-            
             if (wordArray.Count() < 2) 
                 return new Tuple<string, string>("", "");
+            //if (wordArray[0].ToLowerInvariant() == "even")
+            //{
+            //}
 
-            string phoneticWord = ArpabetArrayToPhonetic(wordArray, phoneticDict);
+            if (wordArray[0].Contains('('))
+            {
+                wordArray[0] = wordArray[0].Substring(0, wordArray[0].IndexOf('('));
+            }
+
+                string phoneticWord = ArpabetArrayToPhonetic(wordArray, phoneticDict);
             return new Tuple<string, string>(wordArray[0].ToLowerInvariant(), phoneticWord);
         }
 
@@ -99,7 +111,12 @@ namespace DictionaryBuilderDll
                     continue; //ah is silent at the penultimate place
                 //    arpaArray[1] = "-AH"; //improvisation so we hear this sound
 
-                phoneticDict.TryGetValue(arpaArray[i], out phonetic);
+                
+                if (!phoneticDict.TryGetValue(arpaArray[i], out phonetic))
+                {
+                    string stringWithougNumber = Regex.Replace(arpaArray[i], @"[\d-]", string.Empty);
+                    phoneticDict.TryGetValue(stringWithougNumber, out phonetic);
+                }
                 res += phonetic;
             }
             return res;
