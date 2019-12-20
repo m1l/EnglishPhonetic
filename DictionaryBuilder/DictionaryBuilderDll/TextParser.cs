@@ -34,7 +34,7 @@ namespace DictionaryBuilderDll
                             break;
                     }
                     string translated  = Translate(word, ref dict);
-                    if (isUppercase)
+                    if (isUppercase && translated != "aj") //avoid uppercasing I into Aj
                     {
                         output += translated.First().ToString().ToUpper();
                         if (translated.Length > 1)

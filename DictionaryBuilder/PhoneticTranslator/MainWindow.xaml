@@ -10,10 +10,18 @@
         <TextBlock Text="Paste English text here and press Convert"
                    HorizontalAlignment="Stretch" 
                    DockPanel.Dock="Top"/>
-        <Button x:Name="convertButton"
-                DockPanel.Dock="Bottom"
-                Content="Convert"
-                HorizontalAlignment="Center" Click="convertButton_Click"/>
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Bottom"
+                    HorizontalAlignment="Center">
+            <Button x:Name="selectDictButton"                
+                Content="Select Dictionary" Click="selectDictButton_Click"
+                 />
+            <Button x:Name="convertButton"                
+                    Content="Convert"
+                     Click="convertButton_Click"
+                    Margin="5,0,0,0"/>
+            
+        </StackPanel>
         <TextBox x:Name="textBox" 
                  TextWrapping="Wrap"
                  Margin="0,10,0,10"  

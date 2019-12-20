@@ -41,16 +41,7 @@ namespace PhoneticTranslator
                 phoneticDictPath = Properties.PhoneticTranslator.Default.PhoneticDictPath;
             while (!File.Exists(phoneticDictPath))
             {
-                string DictionariesLocation = string.Empty;
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                if (openFileDialog.ShowDialog() == true)
-                {
-                    phoneticDictPath = openFileDialog.FileName;
-                }
-                else
-                    break;
-                Properties.PhoneticTranslator.Default.PhoneticDictPath = phoneticDictPath;
-                Properties.PhoneticTranslator.Default.Save();
+                phoneticDictPath = OpenDialogToSelectFile();
             }
             return phoneticDictPath;
         }
@@ -60,6 +51,25 @@ namespace PhoneticTranslator
             string sourceText = textBox.Text;
             string parsedText = DictionaryBuilderDll.TextParser.Parse(sourceText, ref dict);
             textBox.Text = parsedText;
+        }
+
+        private void selectDictButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenDialogToSelectFile();
+        }
+        private string OpenDialogToSelectFile()
+        {
+            string phoneticDictPath = string.Empty;
+            string DictionariesLocation = string.Empty;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                phoneticDictPath = openFileDialog.FileName;
+                Properties.PhoneticTranslator.Default.PhoneticDictPath = phoneticDictPath;
+                Properties.PhoneticTranslator.Default.Save();
+                dict = DictionaryBuilder.LoadDictFromFile(phoneticDictPath);
+            }
+            return phoneticDictPath;
         }
     }
 }

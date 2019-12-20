@@ -54,6 +54,18 @@ namespace DictionaryBuilderDll
                 }
             }
         }
+        public void SaveWordsWithSameProunciationFile(string path, Dictionary<string, string> dictionary)
+        {
+            FileStream fileStream = File.Open(path, FileMode.Create); // will create the file or overwrite it if it already exists
+            using (StreamWriter sw = new StreamWriter(fileStream))
+            {
+                foreach (KeyValuePair<string, string> entry in dictionary)
+                {
+                    if (entry.Key == entry.Value)
+                        sw.WriteLine(entry.Key);
+                }
+            }
+        }
         public static Tuple<string, string> BuildDicEntryFromLine(string line, Dictionary<string, string> phoneticDict)
         {
             //remove numbers for stress

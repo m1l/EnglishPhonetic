@@ -7,8 +7,10 @@ namespace DictionaryBuilderDll
     public enum Alphabets
     {
         Cyrillic,
-        Croatian,
-        German
+        Latin,
+        German,
+        Simple,
+        Latinica
     }
     class PhoneticDictionaries
     {
@@ -18,8 +20,10 @@ namespace DictionaryBuilderDll
             {
                 case Alphabets.Cyrillic:
                     return cyrillic; break;
-                case Alphabets.Croatian:
-                    return cyrillic; break;
+                case Alphabets.Simple:
+                    return simple; break;
+                case Alphabets.Latinica:
+                    return latinica; break;
                 case Alphabets.German:
                     return cyrillic; break;
             }
@@ -81,6 +85,119 @@ namespace DictionaryBuilderDll
             { "Y", "ј" }, //Yacht
             { "Z", "з" }, //Zoo
             { "ZH", "ж" } //pleaSure
+        };
+
+        public static Dictionary<string, string> simple = new Dictionary<string, string>()
+        {
+            { "AA", "a" }, //bOt
+            { "AE", "e" }, //bAt 
+            { "AH", "a" }, //bUtt
+            //{ "AH", "" }, //bUtt sometimes silent
+            { "AO", "o" }, //stOry
+            { "AW", "ou" }, //bOUt ???
+            { "AX", "a" }, //commA //new
+            { "AXR", "er" }, //lettER //new
+            { "AY", "aj" }, //bIte //new
+            { "B", "b" }, //Buy
+            { "CH", "ch" }, //CHina
+            { "D", "d" }, //Die
+            { "DH", "t" }, //THy
+            { "DX", "t" }, //buTTEr //maybe empty
+            { "EH", "e" }, //bEt
+            { "EL", "le" }, //bottLE
+            { "EM", "m" }, //rythM
+            { "EN", "n" }, //buttON
+            { "ER", "r" }, //bIRd
+            { "EY", "ej" }, //bAIt
+            { "F", "f" }, //Fight
+            { "G", "g" }, //Guy
+            { "HH", "h" }, //High
+            { "H", "h" }, //High
+            { "IH", "i" }, //bIt
+            { "IX", "i" }, //rabbIt
+            { "IY", "i" }, //bIt
+            { "JH", "џ" }, //Jive
+            { "K", "k" }, //Kite
+            { "L", "l" }, //Lie
+            { "M", "m" }, //My
+            { "N", "n" }, //Nigh
+            { "NG", "ng" }, //siNG
+            { "NX", "n" }, //wiNNer
+            { "OW", "ou" }, //bOAt
+            { "OY", "oj" }, //bOY
+            { "P", "p" }, //Pie
+            { "Q", "" }, //"oh-oh"
+            { "R", "r" }, //Rye
+            { "S", "s" }, //Sigh
+            { "SH", "s" }, //SHy
+            { "T", "t" }, //Tie
+            { "TH", "t" }, //Thigh
+            { "UH", "u" }, //bOOk
+            { "UW", "u" }, //bOOt
+            { "UX", "u" }, //dUde
+            { "V", "v" }, //Vie
+            { "W", "v" }, //Wise
+            { "WH", "wa" }, //WHy
+            { "Y", "j" }, //Yacht
+            { "Z", "z" }, //Zoo
+            { "ZH", "z" } //pleaSure
+        };
+
+
+        public static Dictionary<string, string> latinica = new Dictionary<string, string>()
+        {
+            { "AA", "a" }, //bOt
+            { "AE", "e" }, //bAt 
+            { "AH", "a" }, //bUtt
+            //{ "AH", "" }, //bUtt sometimes silent
+            { "AO", "o" }, //stOry
+            { "AW", "ou" }, //bOUt ???
+            { "AX", "a" }, //commA //new
+            { "AXR", "er" }, //lettER //new
+            { "AY", "aj" }, //bIte //new
+            { "B", "b" }, //Buy
+            { "CH", "č" }, //CHina
+            { "D", "d" }, //Die
+            { "DH", "ð" }, //THy THis https://en.wikipedia.org/wiki/D_with_stroke
+            { "DX", "t" }, //buTTEr //maybe empty 
+            { "EH", "e" }, //bEt
+            { "EL", "le" }, //bottLE
+            { "EM", "m" }, //rythM
+            { "EN", "n" }, //buttON
+            { "ER", "ər" }, //bIRd
+            { "EY", "ej" }, //bAIt
+            { "F", "f" }, //Fight
+            { "G", "g" }, //Guy
+            { "HH", "h" }, //High
+            { "H", "h" }, //High
+            { "IH", "i" }, //bIt
+            { "IX", "i" }, //rabbIt
+            { "IY", "i" }, //bIt
+            { "JH", "ƌ" }, //Jive https://altcodeunicode.com/alt-codes-letter-d-with-accents/
+            { "K", "k" }, //Kite
+            { "L", "l" }, //Lie
+            { "M", "m" }, //My
+            { "N", "n" }, //Nigh
+            { "NG", "ng" }, //siNG
+            { "NX", "n" }, //wiNNer
+            { "OW", "ou" }, //bOAt
+            { "OY", "oj" }, //bOY
+            { "P", "p" }, //Pie
+            { "Q", "" }, //"oh-oh"
+            { "R", "r" }, //Rye
+            { "S", "s" }, //Sigh
+            { "SH", "š" }, //SHy
+            { "T", "t" }, //Tie
+            { "TH", "ŧ" }, //Thigh
+            { "UH", "u" }, //bOOk
+            { "UW", "ū" }, //bOOt
+            { "UX", "ū" }, //dUde
+            { "V", "v" }, //Vie
+            { "W", "w" }, //Wise ʋ
+            { "WH", "wa" }, //WHy
+            { "Y", "j" }, //Yacht
+            { "Z", "z" }, //Zoo
+            { "ZH", "ž" } //pleaSure
         };
     }
 }
